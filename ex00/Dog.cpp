@@ -1,36 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mlarra <mlarra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/06 11:43:18 by mlarra            #+#    #+#             */
-/*   Updated: 2022/10/18 12:41:13 by mlarra           ###   ########.fr       */
+/*   Created: 2022/10/18 10:47:57 by mlarra            #+#    #+#             */
+/*   Updated: 2022/10/18 12:14:13 by mlarra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Dog.hpp"
-#include "Cat.hpp"
-#include "Ishak.hpp"
 
-int main()
+Dog::Dog(): Animal("Dog")
 {
-	const Animal* meta = new Animal();
-	const Animal* j = new Dog();
-	const Animal* i = new Cat();
-	std::cout << j->getType() << " " << std::endl;
-	std::cout << i->getType() << " " << std::endl;
-	i->makeSound(); //will output the cat sound!
-	j->makeSound();
-	meta->makeSound();
+	std::cout << "Dog defoult constructor" << std::endl;
+}
 
-	Animal *k = new Ishak();
-	k->makeSound();
+Dog	& Dog::operator=(const Dog &src)
+{
+	this->type = src.type;
+	return (*this);
+}
 
-	delete meta;
-	delete j;
-	delete i;
-	delete k;
-	return 0;
+Dog::Dog(const Dog & rhs)
+{
+	std::cout << "Dog copy constructor" << std::endl;
+	*this = rhs;
+}
+
+Dog::~Dog()
+{
+	std::cout << "Dog destructor" << std::endl;
+}
+
+void	Dog::makeSound() const
+{
+	std::cout << "Dog make sound Gav" << std::endl;
 }

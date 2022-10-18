@@ -6,18 +6,17 @@
 #    By: mlarra <mlarra@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/06 11:54:51 by mlarra            #+#    #+#              #
-#    Updated: 2022/10/17 12:26:32 by mlarra           ###   ########.fr        #
+#    Updated: 2022/10/18 12:41:51 by mlarra           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	=	DiamondTrap
+NAME	=	ex00
 
-SRCS	=	main.cpp	ClapTrap.cpp	ScavTrap.cpp	FragTrap.cpp\
-			DiamondTrap.cpp
+SRCS	=	main.cpp	Animal.cpp	Dog.cpp	Cat.cpp	Ishak.cpp
 
 OBJS	=	${SRCS:.cpp=.o}
 
-HEADER	=	ClapTrap.hpp	ScavTrap.hpp	FragTrap.hpp	DiamondTrap.hpp
+HEADER	=	Animal.hpp	Dog.hpp	Cat.hpp	Ishak.hpp
 
 CC		=	clang++
 

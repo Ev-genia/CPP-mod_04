@@ -1,35 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   Ishak.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mlarra <mlarra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/17 23:10:31 by mlarra            #+#    #+#             */
-/*   Updated: 2022/10/18 11:51:22 by mlarra           ###   ########.fr       */
+/*   Created: 2022/10/18 12:26:00 by mlarra            #+#    #+#             */
+/*   Updated: 2022/10/18 12:33:41 by mlarra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ANIMAL_HPP
-# define ANIMAL_HPP
+#ifndef ISHAK_HPP
+# define ISHAK_HPP
 
-# include <iostream>
+# include "Animal.hpp"
 
-class Animal
+class Ishak: public Animal
 {
-protected:
-	std::string	type;
 public:
-	Animal();
-	Animal & operator=(const Animal &rhs);
-	Animal(const Animal & src);
-	virtual ~Animal();
-	
-	Animal(std::string enterType);
-	virtual void		makeSound() const;
-	const std::string	&getType() const;
+	Ishak();
+	Ishak &operator=(const Ishak &rhs);
+	Ishak(const Ishak &src);
+	virtual ~Ishak();
+
+	virtual void	makeSound() const;
 };
-
-
 
 #endif

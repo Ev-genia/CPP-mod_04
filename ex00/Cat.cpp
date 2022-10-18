@@ -1,35 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mlarra <mlarra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/17 23:10:31 by mlarra            #+#    #+#             */
-/*   Updated: 2022/10/18 11:51:22 by mlarra           ###   ########.fr       */
+/*   Created: 2022/10/18 10:48:14 by mlarra            #+#    #+#             */
+/*   Updated: 2022/10/18 12:13:52 by mlarra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ANIMAL_HPP
-# define ANIMAL_HPP
+#include "Cat.hpp"
 
-# include <iostream>
-
-class Animal
+Cat::Cat(): Animal("Cat")
 {
-protected:
-	std::string	type;
-public:
-	Animal();
-	Animal & operator=(const Animal &rhs);
-	Animal(const Animal & src);
-	virtual ~Animal();
-	
-	Animal(std::string enterType);
-	virtual void		makeSound() const;
-	const std::string	&getType() const;
-};
+	std::cout << "Cat defoult constructor" << std::endl;
+}
 
+Cat	&Cat::operator=(const Cat & src)
+{
+	this->type = src.type;
+	return (*this);
+}
 
+Cat::Cat(const Cat &rhs)
+{
+	*this = rhs;
+}
 
-#endif
+Cat::~Cat()
+{
+	std::cout << "Cat destructor" << std::endl;
+}
+
+void	Cat::makeSound() const
+{
+	std::cout << "Cat make sound Myau" << std::endl;
+}
