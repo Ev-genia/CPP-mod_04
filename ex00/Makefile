@@ -6,17 +6,17 @@
 #    By: mlarra <mlarra@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/06 11:54:51 by mlarra            #+#    #+#              #
-#    Updated: 2022/10/18 12:41:51 by mlarra           ###   ########.fr        #
+#    Updated: 2022/10/18 13:29:45 by mlarra           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	=	ex00
 
-SRCS	=	main.cpp	Animal.cpp	Dog.cpp	Cat.cpp	Ishak.cpp
+SRCS	=	main.cpp	Animal.cpp	Dog.cpp	Cat.cpp	Ishak.cpp	WrongAnimal.cpp	WrongCat.cpp
 
 OBJS	=	${SRCS:.cpp=.o}
 
-HEADER	=	Animal.hpp	Dog.hpp	Cat.hpp	Ishak.hpp
+HEADER	=	Animal.hpp	Dog.hpp	Cat.hpp	Ishak.hpp	WrongAnimal.hpp	WrongCat.hpp
 
 CC		=	clang++
 
