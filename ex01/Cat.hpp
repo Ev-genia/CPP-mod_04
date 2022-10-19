@@ -6,7 +6,7 @@
 /*   By: mlarra <mlarra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 10:48:23 by mlarra            #+#    #+#             */
-/*   Updated: 2022/10/18 17:39:38 by mlarra           ###   ########.fr       */
+/*   Updated: 2022/10/19 11:06:09 by mlarra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,12 @@ private:
 	Brain	*brain;
 public:
 	Cat();
-	Cat &operator=(const Cat & src);
-	Cat(const Cat & rhs);
+	Cat &operator=(const Cat & rhs);
+	Cat(const Cat & src);
 	virtual ~Cat();
 
 	virtual void	makeSound() const;
+	Brain			*getBrain() const;
 };
 
 

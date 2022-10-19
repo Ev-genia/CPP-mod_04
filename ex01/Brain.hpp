@@ -6,7 +6,7 @@
 /*   By: mlarra <mlarra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 16:59:29 by mlarra            #+#    #+#             */
-/*   Updated: 2022/10/18 17:35:46 by mlarra           ###   ########.fr       */
+/*   Updated: 2022/10/19 11:12:47 by mlarra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ public:
 	Brain();
 	Brain	&operator=(const Brain &rhs);
 	Brain(const Brain &src);
-	~Brain();
+	virtual ~Brain();
 
 	std::string	generateIdea();
 };

@@ -6,7 +6,7 @@
 /*   By: mlarra <mlarra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 10:48:14 by mlarra            #+#    #+#             */
-/*   Updated: 2022/10/18 20:41:24 by mlarra           ###   ########.fr       */
+/*   Updated: 2022/10/19 12:57:36 by mlarra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,18 +18,21 @@ Cat::Cat(): Animal("Cat")
 	this->brain = new Brain();
 }
 
-Cat	&Cat::operator=(const Cat & src)
+Cat	&Cat::operator=(const Cat &rhs)
 {
-	type = src.type;
+	if (this == &rhs)
+		return (*this);
 	delete brain;
-	brain = new Brain(*src.brain);
+	brain = new Brain(*rhs.brain);
+	brain = rhs.brain;
+	type = rhs.type;
 	return (*this);
 }
 
-Cat::Cat(const Cat &rhs)
+Cat::Cat(const Cat &src)
 {
 	std::cout << "Cat copy constructor" << std::endl;
-	*this = rhs;
+	*this = src;
 }
 
 Cat::~Cat()
@@ -41,4 +44,9 @@ Cat::~Cat()
 void	Cat::makeSound() const
 {
 	std::cout << "Cat make sound Myau" << std::endl;
+}
+
+Brain	*Cat::getBrain() const
+{
+	return (brain);
 }

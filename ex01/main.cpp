@@ -6,7 +6,7 @@
 /*   By: mlarra <mlarra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 11:43:18 by mlarra            #+#    #+#             */
-/*   Updated: 2022/10/18 20:46:35 by mlarra           ###   ########.fr       */
+/*   Updated: 2022/10/19 11:53:21 by mlarra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,15 +23,34 @@ int main()
 	const Animal* i = new Cat();
 	delete j;//should not create a leak
 	delete i;
+	std::cout << std::endl;
+	int		size = 4;
+	Animal	*pets[size];
+	int		k;
 
-	Animal	*pets[4];
-	int		i;
-
-	i = 0;
-	while (i < 2)
+	k = 0;
+	while (k < size)
 	{
-		pets[i] = new Cat();
-		i++;
+		if (k < size / 2)
+			pets[k] = new Cat();
+		else
+			pets[k] = new Cat();
+		k++;
 	}
+
+	k = 0;
+	while (k < size)
+	{
+		pets[k]->makeSound();
+		
+		k++;
+	}
+	k = 0;
+	while (k < size)
+	{
+		delete pets[k];
+		k++;
+	}
+	// delete [] pets;
 	return 0;
 }

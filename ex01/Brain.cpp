@@ -6,7 +6,7 @@
 /*   By: mlarra <mlarra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 16:59:19 by mlarra            #+#    #+#             */
-/*   Updated: 2022/10/18 17:38:14 by mlarra           ###   ########.fr       */
+/*   Updated: 2022/10/19 11:57:45 by mlarra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ Brain::Brain()
 	int	i;
 
 	i = 0;
-	while (i < ideas->length())
+	while (i < 100)//ideas->length())
 	{
 		ideas[i] = "no idea";
 		i++;
@@ -30,7 +30,7 @@ Brain	&Brain::operator=(const Brain &rhs)
 	int	i;
 
 	i = 0;
-	while (i < rhs.ideas->length())
+	while (i < 100)//rhs.ideas->length())
 	{
 		ideas[i] = rhs.ideas[i];
 		i++;
@@ -54,7 +54,7 @@ void	Brain::setIdea()
 	int	i;
 
 	i = 0;
-	while (i < ideas->length())
+	while (i < 100)//ideas->length())
 	{
 		ideas[i] = ideas[i] + "I";
 		i++;

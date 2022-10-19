@@ -6,11 +6,11 @@
 #    By: mlarra <mlarra@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/06 11:54:51 by mlarra            #+#    #+#              #
-#    Updated: 2022/10/18 13:29:45 by mlarra           ###   ########.fr        #
+#    Updated: 2022/10/19 12:57:41 by mlarra           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	=	ex00
+NAME	=	ex01
 
 SRCS	=	main.cpp	Animal.cpp	Dog.cpp	Cat.cpp	Ishak.cpp	WrongAnimal.cpp	WrongCat.cpp
 
