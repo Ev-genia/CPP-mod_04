@@ -6,7 +6,7 @@
 /*   By: mlarra <mlarra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 12:44:40 by mlarra            #+#    #+#             */
-/*   Updated: 2022/10/18 13:33:00 by mlarra           ###   ########.fr       */
+/*   Updated: 2022/10/19 12:26:06 by mlarra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,5 +46,5 @@ std::string	WrongAnimal::getType()
 
 void	WrongAnimal::makeSound()
 {
-	std::cout << "WrongAnimal don't make sound" << std::endl;
+	std::cout << "WrongAnimal doesn't make sound" << std::endl;
 }
