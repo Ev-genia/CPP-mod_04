@@ -6,7 +6,7 @@
 /*   By: mlarra <mlarra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 10:48:23 by mlarra            #+#    #+#             */
-/*   Updated: 2022/10/20 10:58:24 by mlarra           ###   ########.fr       */
+/*   Updated: 2022/10/20 11:12:45 by mlarra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ public:
 	Cat(const Cat & src);
 	virtual ~Cat();
 
-	virtual void	makeSound() const;
+	void	makeSound() const;
 	std::string		getBrain() const;
 };
 

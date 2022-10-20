@@ -6,7 +6,7 @@
 /*   By: mlarra <mlarra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 11:43:18 by mlarra            #+#    #+#             */
-/*   Updated: 2022/10/20 10:57:19 by mlarra           ###   ########.fr       */
+/*   Updated: 2022/10/20 11:16:44 by mlarra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ int main()
 	int		size = 4;
 	Animal	*pets[size];
 	int		k;
+	// pets[0]->makeSound();
 	std::cout << "*******************" << std::endl;
 	k = 0;
 	while (k < size)
@@ -59,5 +60,8 @@ int main()
 	dolly = kitten;
 	std::cout << "kitten: " << kitten->getBrain() << std::endl;
 	std::cout << "deep copy: " << dolly->getBrain() << std::endl;
+	std::cout << "*******************" << std::endl;
+	Animal	animal;
+	animal.makeSound();
 	return 0;
 }

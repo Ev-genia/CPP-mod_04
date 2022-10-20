@@ -6,7 +6,7 @@
 /*   By: mlarra <mlarra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 10:48:06 by mlarra            #+#    #+#             */
-/*   Updated: 2022/10/20 10:59:21 by mlarra           ###   ########.fr       */
+/*   Updated: 2022/10/20 11:13:08 by mlarra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ public:
 	Dog(const Dog &src);
 	virtual ~Dog();
 
-	virtual void	makeSound() const;
+	void	makeSound() const;
 	std::string		getBrain();
 };
 
