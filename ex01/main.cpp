@@ -6,7 +6,7 @@
 /*   By: mlarra <mlarra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 11:43:18 by mlarra            #+#    #+#             */
-/*   Updated: 2022/10/19 11:53:21 by mlarra           ###   ########.fr       */
+/*   Updated: 2022/10/20 10:57:19 by mlarra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,34 +23,41 @@ int main()
 	const Animal* i = new Cat();
 	delete j;//should not create a leak
 	delete i;
+	// std::cout << "*******************" << std::endl;
 	std::cout << std::endl;
 	int		size = 4;
 	Animal	*pets[size];
 	int		k;
-
+	std::cout << "*******************" << std::endl;
 	k = 0;
 	while (k < size)
 	{
 		if (k < size / 2)
 			pets[k] = new Cat();
 		else
-			pets[k] = new Cat();
+			pets[k] = new Dog();
 		k++;
 	}
-
+	std::cout << "*******************" << std::endl;
 	k = 0;
 	while (k < size)
 	{
 		pets[k]->makeSound();
-		
 		k++;
 	}
 	k = 0;
+	std::cout << "*******************" << std::endl;
 	while (k < size)
 	{
 		delete pets[k];
 		k++;
 	}
-	// delete [] pets;
+	std::cout << "*******************" << std::endl;
+	Cat	*kitten = new Cat();
+	Cat	*dolly = new Cat();
+
+	dolly = kitten;
+	std::cout << "kitten: " << kitten->getBrain() << std::endl;
+	std::cout << "deep copy: " << dolly->getBrain() << std::endl;
 	return 0;
 }

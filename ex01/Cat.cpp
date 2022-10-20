@@ -6,7 +6,7 @@
 /*   By: mlarra <mlarra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 10:48:14 by mlarra            #+#    #+#             */
-/*   Updated: 2022/10/19 12:57:36 by mlarra           ###   ########.fr       */
+/*   Updated: 2022/10/20 10:57:50 by mlarra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,12 +20,11 @@ Cat::Cat(): Animal("Cat")
 
 Cat	&Cat::operator=(const Cat &rhs)
 {
-	if (this == &rhs)
-		return (*this);
-	delete brain;
-	brain = new Brain(*rhs.brain);
-	brain = rhs.brain;
-	type = rhs.type;
+	if (this != &rhs)
+	{
+		*brain = *rhs.brain;
+		type = rhs.type;
+	}
 	return (*this);
 }
 
@@ -46,7 +45,7 @@ void	Cat::makeSound() const
 	std::cout << "Cat make sound Myau" << std::endl;
 }
 
-Brain	*Cat::getBrain() const
+std::string	Cat::getBrain() const
 {
-	return (brain);
+	return (brain->generateIdea());
 }
