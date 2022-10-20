@@ -6,7 +6,7 @@
 /*   By: mlarra <mlarra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 11:43:18 by mlarra            #+#    #+#             */
-/*   Updated: 2022/10/19 16:40:40 by mlarra           ###   ########.fr       */
+/*   Updated: 2022/10/20 10:10:56 by mlarra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ int main()
 	std::cout << "-----------------------------------" << std::endl;
 	std::cout << "---WrongCat *wc = new WrongCat()---" << std::endl;
 	wc->makeSound();
-
+	std::cout << "*******************" << std::endl;
 	delete meta;
 	delete j;
 	delete i;
