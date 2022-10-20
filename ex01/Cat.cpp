@@ -6,7 +6,7 @@
 /*   By: mlarra <mlarra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 10:48:14 by mlarra            #+#    #+#             */
-/*   Updated: 2022/10/20 10:57:50 by mlarra           ###   ########.fr       */
+/*   Updated: 2022/10/20 16:29:41 by mlarra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,4 +48,9 @@ void	Cat::makeSound() const
 std::string	Cat::getBrain() const
 {
 	return (brain->generateIdea());
+}
+
+Brain	*Cat::getPointerBrain()
+{
+	return (brain);
 }

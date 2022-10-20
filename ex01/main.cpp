@@ -6,7 +6,7 @@
 /*   By: mlarra <mlarra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 11:43:18 by mlarra            #+#    #+#             */
-/*   Updated: 2022/10/20 11:16:44 by mlarra           ###   ########.fr       */
+/*   Updated: 2022/10/20 16:28:30 by mlarra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,8 @@ int main()
 	dolly = kitten;
 	std::cout << "kitten: " << kitten->getBrain() << std::endl;
 	std::cout << "deep copy: " << dolly->getBrain() << std::endl;
+	std::cout << "kitten: " << kitten->getPointerBrain() << std::endl;
+	std::cout << "deep copy: " << dolly->getPointerBrain() << std::endl;
 	std::cout << "*******************" << std::endl;
 	Animal	animal;
 	animal.makeSound();

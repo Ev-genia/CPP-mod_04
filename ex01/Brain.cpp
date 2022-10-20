@@ -6,7 +6,7 @@
 /*   By: mlarra <mlarra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 16:59:19 by mlarra            #+#    #+#             */
-/*   Updated: 2022/10/20 10:27:37 by mlarra           ###   ########.fr       */
+/*   Updated: 2022/10/20 16:34:53 by mlarra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,7 @@
 Brain::Brain()
 {
 	std::cout << "Brain defoult constructor" << std::endl;
-	int	i;
-
-	i = 0;
-	while (i < 100)//ideas->length())
-	{
-		ideas[i] = "no idea";
-		i++;
-	}
+	setIdea();
 }
 
 Brain	&Brain::operator=(const Brain &rhs)
@@ -54,7 +47,7 @@ void	Brain::setIdea()
 	int	i;
 
 	i = 0;
-	while (i < 100)//ideas->length())
+	while (i < ideas->length())
 	{
 		ideas[i] = ideas[i - 1] + "I";
 		i++;
@@ -63,5 +56,8 @@ void	Brain::setIdea()
 
 std::string	Brain::generateIdea()
 {
-	return (ideas[std::rand() % 100]);
+	int	k;
+
+	k = std::rand() % 100;
+	return (ideas[k]);//std::rand() % 100]);
 }
