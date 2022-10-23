@@ -6,7 +6,7 @@
 #    By: mlarra <mlarra@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/06 11:54:51 by mlarra            #+#    #+#              #
-#    Updated: 2022/10/20 16:41:58 by mlarra           ###   ########.fr        #
+#    Updated: 2022/10/23 14:24:55 by mlarra           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,7 @@ OBJS	=	${SRCS:.cpp=.o}
 HEADER	=	AMateria.hpp	Ice.hpp	Cure.hpp	AMateria.hpp	Character.hpp\
 			ICaracter.hpp	IMateriaSource.hpp	MateriaSource.hpp
 
-CC		=	clang++
+CC		=	c++
 
 CFLAGS	=	-Wall -Wextra -Werror -std=c++98
 
