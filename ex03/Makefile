@@ -6,19 +6,19 @@
 #    By: mlarra <mlarra@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/06 11:54:51 by mlarra            #+#    #+#              #
-#    Updated: 2022/10/23 14:24:55 by mlarra           ###   ########.fr        #
+#    Updated: 2022/10/23 14:55:23 by mlarra           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	=	ex03
 
-SRCS	=	main.cpp	AMateria.cpp	Ice.cpp	Cure.cpp	AMateria.cpp\
-			Character.cpp	MateriaSource.cpp
+SRCS	=	main.cpp	AMateria.cpp	Ice.cpp	Cure.cpp	Character.cpp\
+			MateriaSource.cpp
 
 OBJS	=	${SRCS:.cpp=.o}
 
 HEADER	=	AMateria.hpp	Ice.hpp	Cure.hpp	AMateria.hpp	Character.hpp\
-			ICaracter.hpp	IMateriaSource.hpp	MateriaSource.hpp
+			ICharacter.hpp	IMateriaSource.hpp	MateriaSource.hpp
 
 CC		=	c++
 

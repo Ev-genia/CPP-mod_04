@@ -6,7 +6,7 @@
 /*   By: mlarra <mlarra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 12:03:36 by mlarra            #+#    #+#             */
-/*   Updated: 2022/10/20 14:06:17 by mlarra           ###   ########.fr       */
+/*   Updated: 2022/10/23 19:05:23 by mlarra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ MateriaSource::MateriaSource()
 		types[i] = NULL;
 		i++;
 	}
+	// std::cout << "MateriaSource defoult constructor" << std::endl;
 }
 
 MateriaSource	&MateriaSource::operator=(const MateriaSource & rhs)
@@ -45,6 +46,7 @@ MateriaSource	&MateriaSource::operator=(const MateriaSource & rhs)
 MateriaSource::MateriaSource(const MateriaSource & src)
 {
 	*this = src;
+	// std::cout << "MateriaSource copy constructor" << std::endl;
 }
 
 MateriaSource::~MateriaSource()
@@ -57,6 +59,7 @@ MateriaSource::~MateriaSource()
 		delete types[i];
 		i++;
 	}
+	// std::cout << "MateriaSource destructor" << std::endl;
 }
 
 void	MateriaSource::learnMateria(AMateria * materia)
@@ -68,9 +71,23 @@ void	MateriaSource::learnMateria(AMateria * materia)
 	{
 		if (types[i] == NULL)
 		{
-			types[i] == materia;
+			types[i] = materia;
 			return ;
 		}
 		i++;
 	}
+}
+
+AMateria	*MateriaSource::createMateria(std::string enterType)
+{
+	int	i;
+
+	i = 0;
+	while (i < 4)
+	{
+		if (types[i] != NULL && types[i]->getType() == enterType)
+			return (types[i]->clone());
+		i++;
+	}
+	return (NULL);
 }

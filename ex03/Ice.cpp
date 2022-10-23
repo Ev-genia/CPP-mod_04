@@ -6,7 +6,7 @@
 /*   By: mlarra <mlarra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 11:46:03 by mlarra            #+#    #+#             */
-/*   Updated: 2022/10/20 13:43:10 by mlarra           ###   ########.fr       */
+/*   Updated: 2022/10/23 18:57:27 by mlarra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 Ice::Ice(): AMateria("ice")
 {
+	// std::cout << "Ice defoult constructor" << std::endl;
 }
 
 Ice	&Ice::operator=(const Ice & rhs)
@@ -25,17 +26,17 @@ Ice	&Ice::operator=(const Ice & rhs)
 Ice::Ice(const Ice & src)
 {
 	*this = src;
+	// std::cout << "Ice copy constructor" << std::endl;
 }
 
 Ice::~Ice()
 {
+	// std::cout << "Ice destructor" << std::endl;
 }
 
-AMateria	*Ice::clone() const
+Ice	*Ice::clone() const
 {
-	AMateria	*amateriaIce = new Ice();
-
-	return (amateriaIce);
+	return new Ice(*this);
 }
 
 void	Ice::use(ICharacter & target)

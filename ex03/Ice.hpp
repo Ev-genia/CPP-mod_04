@@ -6,7 +6,7 @@
 /*   By: mlarra <mlarra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 11:46:13 by mlarra            #+#    #+#             */
-/*   Updated: 2022/10/20 13:39:49 by mlarra           ###   ########.fr       */
+/*   Updated: 2022/10/23 15:23:10 by mlarra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ public:
 	Ice(const Ice &);
 	virtual ~Ice();
 
-	AMateria*	clone() const;
+	virtual Ice	*clone() const;
 	void		use(ICharacter& target);
 };
 

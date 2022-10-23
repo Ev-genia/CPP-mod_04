@@ -6,7 +6,7 @@
 /*   By: mlarra <mlarra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 12:37:17 by mlarra            #+#    #+#             */
-/*   Updated: 2022/10/20 16:55:29 by mlarra           ###   ########.fr       */
+/*   Updated: 2022/10/23 18:41:44 by mlarra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,13 +42,13 @@ public:
 	Character();
 	Character	&operator=(const Character &);
 	Character(const Character &);
-	~Character();
+	virtual ~Character();
 
-	Character(std::string);
-	std::string const & getName() const;
-	void equip(AMateria* m);
-	void unequip(int idx);
-	void use(int idx, ICharacter& target);
+	Character(std::string enterName);
+	std::string const	&getName() const;
+	void				equip(AMateria* m);
+	void				unequip(int idx);
+	void				use(int idx, ICharacter& target);
 };
 
 #endif

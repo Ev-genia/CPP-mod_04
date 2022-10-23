@@ -6,7 +6,7 @@
 /*   By: mlarra <mlarra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 11:41:23 by mlarra            #+#    #+#             */
-/*   Updated: 2022/10/20 12:53:17 by mlarra           ###   ########.fr       */
+/*   Updated: 2022/10/23 18:40:38 by mlarra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,6 +75,8 @@
 // чтобы создавать их по мере необходимости. Затем вы сможете сгенерировать новую Материю, 
 // используя только строку, идентифицирующую ее тип.
 
+class ICharacter;
+
 class AMateria
 {
 protected:
@@ -86,10 +88,9 @@ public:
 	virtual ~AMateria();
 
 	AMateria(std::string const & type);
-	// [...]
-	std::string const & getType() const; //Returns the materia type
-	virtual AMateria* clone() const = 0;
-	virtual void use(ICharacter& target);
+	std::string const	&getType() const; //Returns the materia type
+	virtual AMateria	*clone() const = 0;
+	virtual void		use(ICharacter &target);
 };
 
 #endif

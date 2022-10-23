@@ -6,7 +6,7 @@
 /*   By: mlarra <mlarra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 11:47:45 by mlarra            #+#    #+#             */
-/*   Updated: 2022/10/20 13:44:53 by mlarra           ###   ########.fr       */
+/*   Updated: 2022/10/23 18:57:16 by mlarra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 Cure::Cure(): AMateria("cure")
 {
+	// std::cout << "Cure defoult constructor" << std::endl;
 }
 
 Cure	&Cure::operator=(const Cure & rhs)
@@ -22,19 +23,20 @@ Cure	&Cure::operator=(const Cure & rhs)
 	return (*this);
 }
 
-Cure::Cure(const Cure & src)
+Cure::Cure(const Cure & src)//: AMateria(src)
 {
 	*this = src;
+	// std::cout << "Cure copy constructor" << std::endl;
 }
 
 Cure::~Cure()
 {
+	// std::cout << "Cure destructor" << std::endl;
 }
 
-AMateria	*Cure::clone() const
+Cure	*Cure::clone() const
 {
-	AMateria	*amateriaCure = new Cure();
-	return (amateriaCure);
+	return new Cure(*this);
 }
 
 void	Cure::use(ICharacter & target)
