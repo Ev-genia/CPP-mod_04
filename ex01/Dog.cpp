@@ -6,7 +6,7 @@
 /*   By: mlarra <mlarra@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 10:47:57 by mlarra            #+#    #+#             */
-/*   Updated: 2022/10/20 11:01:56 by mlarra           ###   ########.fr       */
+/*   Updated: 2022/10/24 12:35:14 by mlarra           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ Dog	& Dog::operator=(const Dog &rhs)
 Dog::Dog(const Dog & src)
 {
 	std::cout << "Dog copy constructor" << std::endl;
+	brain = new Brain();
 	*this = src;
 }
 
